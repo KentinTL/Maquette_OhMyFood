@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles/responsive.sass">
-  <link rel="stylesheet" href="./styles/styles.sass">
+  <link rel="stylesheet" href="./styles/responsive.css">
+  <link rel="stylesheet" href="./styles/styles.css">
   <script src="https://kit.fontawesome.com/f25067b74a.js" crossorigin="anonymous"></script>
   <title>OhMyFood</title>
 </head>
@@ -15,11 +15,12 @@
   <!-- Header -->
   <header>
     <div id="header-logo">
-      <img src="images/logos/ohmyfood@2x.svg" alt="OhMyFood Logo">
+      <h1>Ohmyfood</h1>
     </div>
   </header>
   <main>
     <!-- Search bar -->
+    <!-- plutot utilisé un form pour la search bar -->
     <section>
       <div>
         <input id="searchbar" type="text" placeholder="Paris, Belleville">
@@ -29,7 +30,8 @@
     <section>
       <h2>Réservez le menu qui vous convient</h2>
       <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-      <button>Explorer nos restaurants</button>
+      <!-- Peut etre ajouter une ancre vers nos restaurants dans le bouton -->
+      <button><a href="#nos-restaurants">Explorer nos restaurants</a></button>
     </section>
     <!-- Notre Fonctionnement -->
     <section>
@@ -43,43 +45,55 @@
       </div>
     </section>
     <!-- Nos Restaurants -->
-    <article>
+    <section id="nos-restaurants">
       <h2>Restaurant</h2>
       <div>
         <figure>
           <img src="" alt="Plats de restaurants">
           <figcaption>
-            <h3>La palette du goût</h3>
-            <p>Menilmontant</p>
+            <div>
+              <h3>La palette du goût</h3>
+              <p>Menilmontant</p>
+            </div>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-heart"></i>
           </figcaption>
-          <i class="fa-light fa-heart"></i>
         </figure>
         <figure>
           <img src="" alt="Plats de restaurants">
           <figcaption>
-            <h3>La note enchantée</h3>
-            <p>Charonne</p>
+            <div>
+              <h3>La note enchantée</h3>
+              <p>Charonne</p>
+            </div>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-heart"></i>
           </figcaption>
-          <i class="fa-light fa-heart"></i>
         </figure>
         <figure>
           <img src="" alt="Plats de restaurants">
           <figcaption>
-            <h3>&Agrave; la française</h3>
-            <p>Cité Rouge</p>
+            <div>
+              <h3>&Agrave; la française</h3>
+              <p>Cité Rouge</p>
+            </div>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-heart"></i>
           </figcaption>
-          <i class="fa-light fa-heart"></i>
         </figure>
         <figure>
           <img src="" alt="Plats de restaurants">
           <figcaption>
-            <h3>Le délice des sens</h3>
-            <p>Folie-Méricourt</p>
+            <div>
+              <h3>Le délice des sens</h3>
+              <p>Folie-Méricourt</p>
+            </div>
+            <i class="fa-regular fa-heart"></i>
+            <i class="fa-regular fa-heart"></i>
           </figcaption>
-          <i class="fa-light fa-heart"></i>
         </figure>
       </div>
-    </article>
+    </section>
   </main>
   <!-- Footer -->
   <footer>

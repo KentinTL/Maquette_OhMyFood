@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="./styles/responsive.sass">
-  <link rel="stylesheet" href="./styles/styles.sass">
+  <link rel="stylesheet" href="./styles/responsive.css">
+  <link rel="stylesheet" href="./styles/styles.css">
   <script src="https://kit.fontawesome.com/f25067b74a.js" crossorigin="anonymous"></script>
   <title>OhMyFood</title>
 </head>
@@ -16,167 +16,151 @@
   <header>
     <div id="header-logo">
       <i></i>
-      <img src="../images/logos/ohmyfood@2x.svg" alt="OhMyFood Logo">
+      <h1>Ohmyfood</h1>
     </div>
   </header>
   <main>
     <!-- Notre Entête -->
     <section id="alf-bg">
+      <img src="" alt="">
       <div>
         <h2>&Agrave; la française</h2>
       </div>
     </section>
     <!-- Nos Menus -->
-    <article>
+    <section>
       <!-- Nos Entrées -->
       <article>
         <div>
           <h3>Entrées</h3>
           <div class="blue-ash"></div>
         </div>
-        <ul>
-          <li>
-            <div>
-              <p>Tartare de poulpes acidulés</p>
-              <div>
-                <dfn>Aux zestes d'oranges</dfn>
-                <p>25€</p>
-              </div>
+        <!-- A la place de ul li on a -->
+        <div class="carte">
+          <h4>Tartare de poulpes acidulés</h4>
+          <div class="text">
+            <p>Aux zestes d'oranges</p>
+          </div>
+          <div class="prix">
+            <p>25€</p>
+            <div class="green-check">
+              <i></i>
             </div>
-            <div>
-              <i class="fa-light fa-heart"></i>
-            </div>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <div>
-              <p>Velouté de légumes d'antan</p>
-              <div>
-                <dfn>Carottes, panais, tobinambour</dfn>
-                <p>35€</p>
-              </div>
-            </div>
-            <div>
-              <i class="fa-light fa-heart"></i>
-            </div>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <div>
-              <p>Soupe à l'oignon</p>
-              <div>
-                <dfn>Revisitée</dfn>
-                <p>20€</p>
-              </div>
-            </div>
-            <div>
-              <i class="fa-light fa-heart"></i>
-            </div>
-          </li>
-        </ul>
-      </article>
-      <!-- Nos Plats -->
-      <article>
-        <div>
-          <h3>Plats</h3>
-          <div class="blue-ash"></div>
+          </div>
         </div>
-        <ul>
-          <li>
-            <div>
-              <p>Coquilles Saint-Jacques</p>
-              <div>
-                <dfn>Accompagnées d'une purée de panais</dfn>
-                <p>40€</p>
-              </div>
+        <div class="carte">
+          <h4>Velouté de légumes d'antan</h4>
+          <div class="text">
+            <p>Carottes, panais, tobinambour</p>
+          </div>
+          <div class="prix">
+            <p>35€</p>
+            <div class="green-check">
+              <i></i>
             </div>
-            <div>
-              <i class="fa-light fa-heart"></i>
-            </div>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <div>
-              <p>Magret de canard</p>
-              <div>
-                <dfn>Et parmentier de pommes de terres</dfn>
-                <p>35€</p>
-              </div>
-            </div>
-            <div>
-              <i class="fa-light fa-heart"></i>
-            </div>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <div>
-              <p>Pigeonnaeu d'Illes-et-Vilaines</p>
-              <div>
-                <dfn>Sur son lit de gnocchis aux légumes</dfn>
-                <p>44€</p>
-              </div>
-            </div>
-            <div>
-              <i class="fa-light fa-heart"></i>
-            </div>
-          </li>
-        </ul>
-      </article>
-      <!-- Nos Desserts -->
-      <article>
-        <div>
-          <h3>Desserts</h3>
-          <div class="blue-ash"></div>
+          </div>
         </div>
-        <ul>
-          <li>
-            <div>
-              <p>Pétales de viollettes glacés</p>
-              <div>
-                <dfn>Et purée de noisettes</dfn>
-                <p>18€</p>
+        <div class="carte">
+          <h4>Soupe à l'oignon</h4>
+          <div class="text">
+            <p>Revisitée</p>
+          </div>
+          <div class="prix">
+            <p>20€</p>
+            <div class="green-check">
+              <i></i>
+            </div>
+          </div>
+        </div>
+        <!-- remplacer les p titre en h et dfn par p -->
+        <!-- Nos Plats -->
+        <article>
+          <div>
+            <h3>Plats</h3>
+            <div class="blue-ash"></div>
+          </div>
+          <div class="carte">
+            <h4>Coquilles Saint-Jacques</h4>
+            <div class="text">
+              <p>Accompagnées d'une purée de panais</p>
+            </div>
+            <div class="prix">
+              <p>40€</p>
+              <div class="green-check">
+                <i></i>
               </div>
             </div>
-            <div>
-              <i class="fa-light fa-heart"></i>
+          </div>
+          <div class="carte">
+            <h4>Magret de canard</h4>
+            <div class="text">
+              <p>Et parmentier de pommes de terres</p>
             </div>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <div>
-              <p>Fondant au chocolat</p>
-              <div>
-                <dfn>Revisité</dfn>
-                <p>22€</p>
+            <div class="prix">
+              <p>35€</p>
+              <div class="green-check">
+                <i></i>
               </div>
             </div>
-            <div>
-              <i class="fa-light fa-heart"></i>
+          </div>
+          <div class="carte">
+            <h4>Pigeonnaeu d'Illes-et-Vilaines</h4>
+            <div class="text">
+              <p>Sur son lit de gnocchis aux légumes</p>
             </div>
-          </li>
-        </ul>
-        <ul>
-          <li>
-            <div>
-              <p>Millefeuille croustillant</p>
-              <div>
-                <dfn>Myrtilles et pâte d'amande</dfn>
-                <p>23€</p>
+            <div class="prix">
+              <p>44€</p>
+              <div class="green-check">
+                <i></i>
               </div>
             </div>
-            <div>
-              <i class="fa-light fa-heart"></i>
+          </div>
+        </article>
+        <!-- Nos Desserts -->
+        <article>
+          <div>
+            <h3>Desserts</h3>
+            <div class="blue-ash"></div>
+          </div>
+          <div class="carte">
+            <h4>Pétales de viollettes glacés</h4>
+            <div class="text">
+              <p>Et purée de noisettes</p>
             </div>
-          </li>
-        </ul>
-      </article>
-      <button>Commander</button>
-    </article>
+            <div class="prix">
+              <p>18€</p>
+              <div class="green-check">
+                <i></i>
+              </div>
+            </div>
+          </div>
+          <div class="carte">
+            <h4>Fondant au chocolat</h4>
+            <div class="text">
+              <p>Revisité</p>
+            </div>
+            <div class="prix">
+              <p>22€</p>
+              <div class="green-check">
+                <i></i>
+              </div>
+            </div>
+          </div>
+          <div class="carte">
+            <h4>Millefeuille croustillant</h4>
+            <div class="text">
+              <p>Myrtilles et pâte d'amande</p>
+            </div>
+            <div class="prix">
+              <p>23€</p>
+              <div class="green-check">
+                <i></i>
+              </div>
+            </div>
+          </div>
+        </article>
+        <button>Commander</button>
+    </section>
   </main>
   <!-- Footer -->
   <footer>
