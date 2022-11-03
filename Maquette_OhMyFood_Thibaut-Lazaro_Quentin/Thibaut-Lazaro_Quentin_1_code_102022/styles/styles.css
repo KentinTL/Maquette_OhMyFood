@@ -1,5 +1,55 @@
 body {
   max-width: 1400px;
   margin: 0 auto;
-  background-color: pink;
+}
+
+#ma-liste .cartouche {
+  align-items: center;
+  border-radius: 30px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px;
+  display: flex;
+  font-size: 20px;
+  margin: 0 auto;
+  width: 90%;
+}
+#ma-liste .cartouche .cercle {
+  align-items: center;
+  background-color: #A26EE1;
+  border-radius: 50%;
+  color: white;
+  display: flex;
+  height: 30px;
+  justify-content: center;
+  margin: 0 10px 0 -10px;
+  width: 30px;
+}
+#ma-liste .cartouche svg {
+  margin: 0 10px 0 0;
+}
+
+.resto-pres {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+  border-radius: 25px;
+}
+.resto-pres a {
+  text-decoration: none;
+}
+.resto-pres img {
+  width: 100%;
+  border-radius: 25px 25px 0 0;
+  height: 150px;
+}
+.resto-pres figcaption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.resto-pres figcaption .texte-resto {
+  margin: 5px 0 10px 10px;
+}
+.resto-pres figcaption .texte-resto h3, .resto-pres figcaption .texte-resto p {
+  margin: 5px 0;
+}
+.resto-pres figcaption .resto-logo {
+  margin-right: 10px;
 }/*# sourceMappingURL=styles.css.map */
