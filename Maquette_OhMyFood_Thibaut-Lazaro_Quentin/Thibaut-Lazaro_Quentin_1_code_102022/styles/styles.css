@@ -1,20 +1,92 @@
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+}
+
+h1 {
+  font-family: "Shrikhand", cursive;
+}
+
 body {
   max-width: 1400px;
   margin: 0 auto;
 }
 
-#ma-liste .cartouche {
+header {
+  padding: 10px 5px 0px 5px;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+header #header-logo {
+  text-align: center;
+}
+
+main {
+  background-color: #F7F7F7;
+}
+
+#ma-search-bar {
+  background-color: #EAEAEA;
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+}
+#ma-search-bar svg {
+  color: #353535;
+  padding-left: 40px;
+}
+#ma-search-bar #searchbar {
+  background-color: #EAEAEA;
+  border: none;
+  text-align: center;
+  margin-right: 25px;
+  color: #353535;
+}
+
+#presentation {
+  text-align: center;
+  margin: 40px 20px 80px 20px;
+}
+#presentation p {
+  color: #353535;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+#presentation button {
+  background: linear-gradient(to top left, #9356DC, #FF79DA);
+  border: none;
+  border-radius: 25px;
+  padding: 15px 30px 15px 30px;
+}
+#presentation button a {
+  color: white;
+}
+
+#fonctionnement h2 {
+  margin-left: 15px;
+  margin-bottom: 25px;
+}
+#fonctionnement #ma-liste {
+  margin-bottom: 100px;
+}
+#fonctionnement #ma-liste .cartouche {
   align-items: center;
   border-radius: 30px;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px;
+  cursor: pointer;
   display: flex;
+  flex-direction: row;
   font-size: 20px;
-  margin: 0 auto;
-  width: 90%;
+  font-weight: 700;
+  width: 85%;
+  padding: 15px;
+  margin: 25px auto;
 }
-#ma-liste .cartouche .cercle {
+#fonctionnement #ma-liste .cartouche .cercle {
   align-items: center;
-  background-color: #A26EE1;
+  background-color: #9356DC;
   border-radius: 50%;
   color: white;
   display: flex;
@@ -23,33 +95,61 @@ body {
   margin: 0 10px 0 -10px;
   width: 30px;
 }
-#ma-liste .cartouche svg {
+#fonctionnement #ma-liste .cartouche svg {
   margin: 0 10px 0 0;
+  color: #7E7E7E;
+}
+#fonctionnement #ma-liste .cartouche:hover svg {
+  color: #9356DC;
 }
 
-.resto-pres {
+#nos-restaurants {
+  margin-bottom: 50px;
+}
+#nos-restaurants h2 {
+  margin-left: 15px;
+}
+#nos-restaurants .resto-pres {
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
   border-radius: 25px;
+  margin: 25px 15px;
 }
-.resto-pres a {
+#nos-restaurants .resto-pres a {
   text-decoration: none;
 }
-.resto-pres img {
+#nos-restaurants .resto-pres img {
   width: 100%;
   border-radius: 25px 25px 0 0;
   height: 150px;
 }
-.resto-pres figcaption {
+#nos-restaurants .resto-pres figcaption {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.resto-pres figcaption .texte-resto {
+#nos-restaurants .resto-pres figcaption .texte-resto {
   margin: 5px 0 10px 10px;
 }
-.resto-pres figcaption .texte-resto h3, .resto-pres figcaption .texte-resto p {
+#nos-restaurants .resto-pres figcaption .texte-resto h3, #nos-restaurants .resto-pres figcaption .texte-resto p {
   margin: 5px 0;
 }
-.resto-pres figcaption .resto-logo {
+#nos-restaurants .resto-pres figcaption .resto-logo {
   margin-right: 10px;
+}
+
+footer {
+  background-color: #353535;
+  padding: 15px 15px 30px 15px;
+  color: white;
+}
+footer .footer-logo h1 {
+  font-size: 16px;
+  font-weight: 200;
+  margin-bottom: 20px;
+}
+footer li svg {
+  margin-right: 10px;
+}
+footer li {
+  margin-bottom: 10px;
 }/*# sourceMappingURL=styles.css.map */
