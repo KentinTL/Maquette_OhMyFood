@@ -5,7 +5,7 @@
   text-decoration: none;
   font-family: 'Roboto', sans-serif;
 }
-h1 {
+h1, h2 {
   font-family: 'Shrikhand', cursive;
 }
 body{
@@ -20,7 +20,17 @@ header {
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
               rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
   #header-logo {
-    text-align: center;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    // text-align: center;
+    a{
+      
+      svg {
+        font-size: 24px;
+        color: black;
+      }
+    }
   }
 }
 // MAIN
@@ -83,8 +93,8 @@ main {
       flex-direction: row;
       font-size: 20px;
       font-weight: 700;
-      width: 85%;
-      padding: 15px;
+      width: 75%;
+      padding: 20px;
       margin: 25px auto;
       .cercle {
         align-items: center;
@@ -94,7 +104,7 @@ main {
         display: flex;
         height: 30px;
         justify-content: center;
-        margin: 0 10px 0 -10px;
+        margin: 0 20px 0 -35px;
         width: 30px;
       }
       svg {
@@ -164,5 +174,90 @@ footer {
   }
   li {
     margin-bottom: 10px;
+  }
+}
+
+  // LES PAGES MENUS
+.main-menus {
+  // Entêtes
+  #demi-bg {
+    background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 300px;
+    display: flex;
+    .nom-restaurant {
+      align-self: flex-end;
+      align-items: center;
+      background-color: white;
+      border-top-left-radius: 35px;
+      border-top-right-radius: 35px;
+      bottom: 0px;
+      display: flex;
+      justify-content: space-between;
+      padding: 25px 20px;
+      width: 100%;
+      h2 {
+        font-size: 28px;
+      }
+      .logo-aime-nom {
+        svg {
+          font-size: 22px;
+        }
+      }
+    }
+  }
+  .menu {
+    padding-bottom: 30px;
+    text-align: center;
+    .article-principal{
+      margin-left: 15px;
+      margin-right: 10px;
+      text-align: left;
+    // nos entrées
+      // Titre des entrées
+      h3 {
+        font-weight: lighter;
+        text-transform: uppercase;
+      }
+      .trait-bleu {
+        background-color: #99E2D0;
+        height: 4px;
+        width: 40px;
+      }
+      // Cartes des entrées
+      .carte {
+        align-items: flex-end;
+        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, 
+        rgba(0, 0, 0, 0.07) 0px 2px 2px,
+        rgba(0, 0, 0, 0.07) 0px 4px 4px, 
+        rgba(0, 0, 0, 0.07) 0px 8px 8px,
+        rgba(0, 0, 0, 0.07) 0px 16px 16px;
+        border-radius: 15px;
+        display: flex;
+        justify-content: space-between;
+        margin: 15px 0px 30px 0px;
+        padding: 15px 20px 10px 15px;
+        .texte {
+          p {
+            font-size: 14px;
+          }
+        }
+        .prix {
+          display: flex;
+          .coche-verte {
+            display: none;
+          }
+        }
+      }
+    }
+    button {
+      background: linear-gradient(to top left, #9356DC, #FF79DA);
+      border: none;
+      border-radius: 25px;
+      color: #ffff;
+      margin: 0 auto;
+      padding: 15px 30px 15px 30px;
+    }
   }
 }
