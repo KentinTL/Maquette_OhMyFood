@@ -12,6 +12,7 @@ body{
   max-width: 1400px;
   margin: 0 auto;
 }
+// VARIABLE
 
 // INDEX HTML
 // header
@@ -83,11 +84,16 @@ main {
     margin-bottom: 25px;
   }
   #ma-liste {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     margin-bottom: 100px;
+    max-width: 100%;
     .cartouche {
       align-items: center;
       border-radius: 30px;
       box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px;
+      max-width: 355px;
       cursor: pointer;
       display: flex;
       flex-direction: row;
@@ -116,6 +122,7 @@ main {
   #ma-liste {
     .cartouche:hover svg {
       color: #9356DC;
+
     }
   }
 }
@@ -123,8 +130,14 @@ main {
 // Nos Restaurants
 #nos-restaurants {
   margin-bottom: 50px;
+  max-width: 100%;
   h2 {
     margin-left: 15px;
+  }
+  .global-restos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
   }
   .resto-pres {
     box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, 
@@ -134,13 +147,15 @@ main {
       rgba(0, 0, 0, 0.07) 0px 16px 16px;
     border-radius: 25px;
     margin: 25px 15px;
+    width: 345px;
     a {
       text-decoration: none;
     }
     img {
-      width: 100%;
       border-radius: 25px 25px 0 0;
       height: 150px;
+      object-fit: cover;
+      width: 100%;
     }
     figcaption {
       display: flex;
@@ -165,15 +180,20 @@ footer {
   padding: 15px 15px 30px 15px;
   color: white;
   .footer-logo h1 {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 200;
     margin-bottom: 20px;
   }
-  li svg {
-    margin-right: 10px;
-  }
-  li {
-    margin-bottom: 10px;
+  .nos-mentions {
+    display: flex;
+    flex-wrap: wrap;
+    .mentions svg {
+      margin-right: 10px;
+    }
+    .mentions {
+      margin-bottom: 10px;
+      margin-right: 150px;
+    }
   }
 }
 
@@ -184,9 +204,9 @@ footer {
     background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
-    height: 300px;
     display: flex;
-    .nom-restaurant {
+    min-height: 300px;
+     .nom-restaurant {
       align-self: flex-end;
       align-items: center;
       background-color: white;
@@ -226,27 +246,52 @@ footer {
         width: 40px;
       }
       // Cartes des entrées
-      .carte {
-        align-items: flex-end;
-        box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, 
-        rgba(0, 0, 0, 0.07) 0px 2px 2px,
-        rgba(0, 0, 0, 0.07) 0px 4px 4px, 
-        rgba(0, 0, 0, 0.07) 0px 8px 8px,
-        rgba(0, 0, 0, 0.07) 0px 16px 16px;
-        border-radius: 15px;
+      .carte-generale {
         display: flex;
-        justify-content: space-between;
-        margin: 15px 0px 30px 0px;
-        padding: 15px 20px 10px 15px;
-        .texte {
-          p {
-            font-size: 14px;
-          }
-        }
-        .prix {
+        flex-wrap: wrap;
+        justify-content: space-around;
+        .carte {
+          align-items: flex-end;
+          box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, 
+          rgba(0, 0, 0, 0.07) 0px 2px 2px,
+          rgba(0, 0, 0, 0.07) 0px 4px 4px, 
+          rgba(0, 0, 0, 0.07) 0px 8px 8px,
+          rgba(0, 0, 0, 0.07) 0px 16px 16px;
+          border-radius: 15px;
           display: flex;
-          .coche-verte {
-            display: none;
+          justify-content: space-between;
+          margin: 15px 0px 30px 0px;
+          max-width: 380px;
+          overflow: hidden;
+          padding: 15px 0px 10px 15px;
+          width: 355px;
+          .texte {
+            p {
+              font-size: 14px;
+            }
+          }
+          .animation-verte {
+            display: flex;
+            align-items: flex-end;
+            .prix {
+              margin-right: 15px;
+            }
+            .coche-verte {
+              align-items: center;
+              background-color: #99E2D0;
+              border-top-right-radius: 15px;
+              border-bottom-right-radius: 15px;
+              display: flex;
+              height: 65px;
+              justify-content: center;
+              margin-bottom: -10px;
+              margin-right: -70px;
+              margin-top: -15px;
+              width: 65px;
+              svg {
+                color: white;
+              }
+            }
           }
         }
       }
@@ -258,6 +303,7 @@ footer {
       color: #ffff;
       margin: 0 auto;
       padding: 15px 30px 15px 30px;
+      width: 200px;
     }
   }
 }
