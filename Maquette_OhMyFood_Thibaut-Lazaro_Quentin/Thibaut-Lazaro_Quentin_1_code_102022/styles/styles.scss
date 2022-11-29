@@ -20,18 +20,9 @@ header {
   padding: 10px 5px 0px 5px;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
               rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
-  #header-logo {
-    align-items: center;
+  .header-logo {
     display: flex;
     justify-content: center;
-    // text-align: center;
-    a{
-      
-      svg {
-        font-size: 24px;
-        color: black;
-      }
-    }
   }
 }
 // MAIN
@@ -61,6 +52,9 @@ main {
 #presentation {
   text-align: center;
   margin: 40px 20px 80px 20px;
+  h2 {
+    font-family: "Roboto", sans-serif;
+  }
   p {
     color: #353535;
     margin-top: 15px;
@@ -75,11 +69,17 @@ main {
       color: #ffff;
     }
   }
+  button:hover {
+    transition: 0.5s;
+    background: linear-gradient(to top left, #965ddc, #ff85dc);
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 5px 3px;
+  }
 }
 
 // Notre fonctionnement 
 #fonctionnement {
   h2 {
+    font-family: "Roboto", sans-serif;
     margin-left: 15px;
     margin-bottom: 25px;
   }
@@ -132,6 +132,7 @@ main {
   margin-bottom: 50px;
   max-width: 100%;
   h2 {
+    font-family: "Roboto", sans-serif;
     margin-left: 15px;
   }
   .global-restos {
@@ -148,6 +149,18 @@ main {
     border-radius: 25px;
     margin: 25px 15px;
     width: 345px;
+    position: relative;
+    .nouveaute {
+      background-color: #99E2D0;
+      border-radius: 5px;
+      color: #008766;
+      font-size: 14px;
+      font-weight: 700;
+      padding: 7px 10px;
+      position: absolute;
+      right: 16px;
+      top: 16px;
+    }
     a {
       text-decoration: none;
     }
@@ -198,6 +211,22 @@ footer {
 }
 
   // LES PAGES MENUS
+  // Header menu Logo
+.menu-logo {
+  align-items: center;
+  display: flex;
+  a {
+    color: black;
+    svg {
+      margin-left: 10px;
+      font-size: 24px;
+    }
+  }
+  h1 {
+    margin: 0 auto;
+  }
+}
+  // Main
 .main-menus {
   // Entêtes
   #demi-bg {
@@ -205,7 +234,7 @@ footer {
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
-    min-height: 300px;
+    min-height: 350px;
      .nom-restaurant {
       align-self: flex-end;
       align-items: center;
@@ -266,6 +295,7 @@ footer {
           padding: 15px 0px 10px 15px;
           width: 355px;
           .texte {
+            white-space: nowrap;
             p {
               font-size: 14px;
             }
@@ -275,6 +305,7 @@ footer {
             align-items: flex-end;
             .prix {
               margin-right: 15px;
+              transition: 1s;
             }
             .coche-verte {
               align-items: center;
@@ -282,28 +313,61 @@ footer {
               border-top-right-radius: 15px;
               border-bottom-right-radius: 15px;
               display: flex;
-              height: 65px;
+              height: 70px;
               justify-content: center;
               margin-bottom: -10px;
               margin-right: -70px;
               margin-top: -15px;
-              width: 65px;
+              transition: 1s;
+              width: 70px;
               svg {
                 color: white;
+                transition: 1s;
               }
             }
           }
         }
+        .carte:hover{
+          .texte {  
+            overflow: hidden;
+            h4, p {
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
+          }
+          cursor: pointer;
+          .prix {
+            margin-right: 50px;
+            background: white;
+            transition: 1s;
+          }
+          .coche-verte {
+            margin-right: 0px;
+            transition: 1s;
+          }
+          svg {
+            transition: 1s;
+            transform: rotate(360deg);
+          }
+        } 
       }
     }
     button {
       background: linear-gradient(to top left, #9356DC, #FF79DA);
       border: none;
       border-radius: 25px;
-      color: #ffff;
       margin: 0 auto;
       padding: 15px 30px 15px 30px;
       width: 200px;
+      transition: 0.5s;
+      a {
+      color: #ffff;
+      }
+    }
+    button:hover {
+      transition: 0.5s;
+      background: linear-gradient(to top left, #965ddc, #ff85dc);
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 5px 3px;
     }
   }
 }

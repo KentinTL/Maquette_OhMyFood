@@ -19,14 +19,9 @@ header {
   padding: 10px 5px 0px 5px;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
 }
-header #header-logo {
-  align-items: center;
+header .header-logo {
   display: flex;
   justify-content: center;
-}
-header #header-logo a svg {
-  font-size: 24px;
-  color: black;
 }
 
 main {
@@ -55,6 +50,9 @@ main {
   text-align: center;
   margin: 40px 20px 80px 20px;
 }
+#presentation h2 {
+  font-family: "Roboto", sans-serif;
+}
 #presentation p {
   color: #353535;
   margin-top: 15px;
@@ -69,8 +67,14 @@ main {
 #presentation button a {
   color: white;
 }
+#presentation button:hover {
+  transition: 0.5s;
+  background: linear-gradient(to top left, #965ddc, #ff85dc);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 5px 3px;
+}
 
 #fonctionnement h2 {
+  font-family: "Roboto", sans-serif;
   margin-left: 15px;
   margin-bottom: 25px;
 }
@@ -119,6 +123,7 @@ main {
   max-width: 100%;
 }
 #nos-restaurants h2 {
+  font-family: "Roboto", sans-serif;
   margin-left: 15px;
 }
 #nos-restaurants .global-restos {
@@ -131,6 +136,18 @@ main {
   border-radius: 25px;
   margin: 25px 15px;
   width: 345px;
+  position: relative;
+}
+#nos-restaurants .resto-pres .nouveaute {
+  background-color: #99E2D0;
+  border-radius: 5px;
+  color: #008766;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 7px 10px;
+  position: absolute;
+  right: 16px;
+  top: 16px;
 }
 #nos-restaurants .resto-pres a {
   text-decoration: none;
@@ -179,12 +196,27 @@ footer .nos-mentions .mentions {
   margin-right: 150px;
 }
 
+.menu-logo {
+  align-items: center;
+  display: flex;
+}
+.menu-logo a {
+  color: black;
+}
+.menu-logo a svg {
+  margin-left: 10px;
+  font-size: 24px;
+}
+.menu-logo h1 {
+  margin: 0 auto;
+}
+
 .main-menus #demi-bg {
   background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  min-height: 300px;
+  min-height: 350px;
 }
 .main-menus #demi-bg .nom-restaurant {
   align-self: flex-end;
@@ -239,6 +271,9 @@ footer .nos-mentions .mentions {
   padding: 15px 0px 10px 15px;
   width: 355px;
 }
+.main-menus .menu .article-principal .carte-generale .carte .texte {
+  white-space: nowrap;
+}
 .main-menus .menu .article-principal .carte-generale .carte .texte p {
   font-size: 14px;
 }
@@ -248,6 +283,7 @@ footer .nos-mentions .mentions {
 }
 .main-menus .menu .article-principal .carte-generale .carte .animation-verte .prix {
   margin-right: 15px;
+  transition: 1s;
 }
 .main-menus .menu .article-principal .carte-generale .carte .animation-verte .coche-verte {
   align-items: center;
@@ -255,22 +291,55 @@ footer .nos-mentions .mentions {
   border-top-right-radius: 15px;
   border-bottom-right-radius: 15px;
   display: flex;
-  height: 65px;
+  height: 70px;
   justify-content: center;
   margin-bottom: -10px;
   margin-right: -70px;
   margin-top: -15px;
-  width: 65px;
+  transition: 1s;
+  width: 70px;
 }
 .main-menus .menu .article-principal .carte-generale .carte .animation-verte .coche-verte svg {
   color: white;
+  transition: 1s;
+}
+.main-menus .menu .article-principal .carte-generale .carte:hover {
+  cursor: pointer;
+}
+.main-menus .menu .article-principal .carte-generale .carte:hover .texte {
+  overflow: hidden;
+}
+.main-menus .menu .article-principal .carte-generale .carte:hover .texte h4, .main-menus .menu .article-principal .carte-generale .carte:hover .texte p {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.main-menus .menu .article-principal .carte-generale .carte:hover .prix {
+  margin-right: 50px;
+  background: white;
+  transition: 1s;
+}
+.main-menus .menu .article-principal .carte-generale .carte:hover .coche-verte {
+  margin-right: 0px;
+  transition: 1s;
+}
+.main-menus .menu .article-principal .carte-generale .carte:hover svg {
+  transition: 1s;
+  transform: rotate(360deg);
 }
 .main-menus .menu button {
   background: linear-gradient(to top left, #9356DC, #FF79DA);
   border: none;
   border-radius: 25px;
-  color: white;
   margin: 0 auto;
   padding: 15px 30px 15px 30px;
   width: 200px;
+  transition: 0.5s;
+}
+.main-menus .menu button a {
+  color: white;
+}
+.main-menus .menu button:hover {
+  transition: 0.5s;
+  background: linear-gradient(to top left, #965ddc, #ff85dc);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 5px 3px;
 }/*# sourceMappingURL=styles.css.map */
