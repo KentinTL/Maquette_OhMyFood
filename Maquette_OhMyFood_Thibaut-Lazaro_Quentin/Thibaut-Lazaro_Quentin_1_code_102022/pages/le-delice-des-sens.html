@@ -11,72 +11,85 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Shrikhand&display=swap"
     rel="stylesheet">
-  <script src="https://kit.fontawesome.com/f25067b74a.js" crossorigin="anonymous"></script>
+  <!-- <script src="https://kit.fontawesome.com/f25067b74a.js" crossorigin="anonymous"></script> -->
+  <script src="https://kit.fontawesome.com/85aed930f6.js" crossorigin="anonymous"></script>
+
   <title>OhMyFood</title>
 </head>
 
 <body>
   <!-- Header -->
   <header>
-    <div id="header-logo">
-      <a href="../index.html"><i>back</i></a>
+    <div class="menu-logo">
+      <a href="../index.html"><i class="fleche-gauche fas fa-arrow-left"></i></a>
       <h1>Ohmyfood</h1>
     </div>
   </header>
   <main class="main-menus">
     <!-- Notre Entête -->
-    <section id="demi-bg">
-      <img src="" alt="">
-      <div>
-        <h2>Le délice des sens</h2>
-        <i></i>
+    <section id="demi-bg-ldds">
+      <div class="nom-restaurant">
+        <h2>&Agrave; la française</h2>
+        <div class="logo-aime-nom">
+          <i class="coeur-vide far fa-heart"></i>
+          <i class="coeur-plein fas fa-heart"></i>
+        </div>
       </div>
     </section>
     <!-- Nos Menus -->
-    <section>
+    <section class="menu">
       <!-- Nos Entrées -->
-      <article>
-        <div>
-          <h3>Entrées</h3>
-          <div class="trait-bleu"></div>
-        </div>
-        <!-- A la place de ul li on a -->
-        <div class="carte">
-          <h4>Tartare de thon</h4>
-          <div class="texte">
-            <p>Assaisonné au yuzu</p>
+      <article class="article-principal">
+        <article>
+          <div>
+            <h3>Entrées</h3>
+            <div class="trait-bleu"></div>
           </div>
-          <div class="prix">
-            <p>25€</p>
-            <div class="coche-verte">
-              <i></i>
+          <div class="carte-generale">
+            <div class="carte">
+              <div class="texte">
+                <h4>Tartare de poulpes acidulés</h4>
+                <p>Aux zestes d'oranges</p>
+              </div>
+              <div class="animation-verte">
+                <div class="prix">
+                  <p>25€</p>
+                </div>
+                <div class="coche-verte">
+                  <i class="picto-check fas fa-check-circle"></i>
+                </div>
+              </div>
+            </div>
+            <div class="carte">
+              <div class="texte">
+                <h4>Velouté de légumes d'antan</h4>
+                <p>Carottes, panais, tobinambour</p>
+              </div>
+              <div class="animation-verte">
+                <div class="prix">
+                  <p>35€</p>
+                </div>
+                <div class="coche-verte">
+                  <i class="picto-check fas fa-check-circle"></i>
+                </div>
+              </div>
+            </div>
+            <div class="carte">
+              <div class="texte">
+                <h4>Soupe à l'oignon</h4>
+                <p>Revisitée</p>
+              </div>
+              <div class="animation-verte">
+                <div class="prix">
+                  <p>20€</p>
+                </div>
+                <div class="coche-verte">
+                  <i class="picto-check fas fa-check-circle"></i>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="carte">
-          <h4>Bouchée de homard croustillant</h4>
-          <div class="texte">
-            <p>Et sa farandole de petits légumes</p>
-          </div>
-          <div class="prix">
-            <p>35€</p>
-            <div class="coche-verte">
-              <i></i>
-            </div>
-          </div>
-        </div>
-        <div class="carte">
-          <h4>Velouté de cèpes</h4>
-          <div class="texte">
-            <p>Aux truffes</p>
-          </div>
-          <div class="prix">
-            <p>20€</p>
-            <div class="coche-verte">
-              <i></i>
-            </div>
-          </div>
-        </div>
+        </article>
         <!-- remplacer les p titre en h et dfn par p -->
         <!-- Nos Plats -->
         <article>
@@ -84,39 +97,47 @@
             <h3>Plats</h3>
             <div class="trait-bleu"></div>
           </div>
-          <div class="carte">
-            <h4>Poulet roti aux herbes de Provences</h4>
-            <div class="texte">
-              <p>Et sa crème de truffe</p>
-            </div>
-            <div class="prix">
-              <p>40€</p>
-              <div class="coche-verte">
-                <i></i>
+          <div class="carte-generale">
+            <div class="carte">
+              <div class="texte">
+                <h4>Coquilles Saint-Jacques</h4>
+                <p>Accompagnées d'une purée de panais</p>
+              </div>
+              <div class="animation-verte">
+                <div class="prix">
+                  <p>40€</p>
+                </div>
+                <div class="coche-verte">
+                  <i class="picto-check fas fa-check-circle"></i>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="carte">
-            <h4>Langouste rôtie</h4>
-            <div class="texte">
-              <p>Et ses légumes de saisons</p>
-            </div>
-            <div class="prix">
-              <p>35€</p>
-              <div class="coche-verte">
-                <i></i>
+            <div class="carte">
+              <div class="texte">
+                <h4>Magret de canard</h4>
+                <p>Et parmentier de pommes de terres</p>
+              </div>
+              <div class="animation-verte">
+                <div class="prix">
+                  <p>35€</p>
+                </div>
+                <div class="coche-verte">
+                  <i class="picto-check fas fa-check-circle"></i>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="carte">
-            <h4>Côte de boeuf Angus</h4>
-            <div class="texte">
-              <p>Et sa purée de panais</p>
-            </div>
-            <div class="prix">
-              <p>44€</p>
-              <div class="coche-verte">
-                <i></i>
+            <div class="carte">
+              <div class="texte">
+                <h4>Pigeonnaeu d'Illes-et-Vilaines</h4>
+                <p>Sur son lit de gnocchis aux légumes</p>
+              </div>
+              <div class="animation-verte">
+                <div class="prix">
+                  <p>44€</p>
+                </div>
+                <div class="coche-verte">
+                  <i class="picto-check fas fa-check-circle"></i>
+                </div>
               </div>
             </div>
           </div>
@@ -127,58 +148,65 @@
             <h3>Desserts</h3>
             <div class="trait-bleu"></div>
           </div>
-          <div class="carte">
-            <h4>Farandole de desserts</h4>
-            <div class="texte">
-              <p>Du chef</p>
-            </div>
-            <div class="prix">
-              <p>18€</p>
-              <div class="coche-verte">
-                <i></i>
+          <div class="carte-generale">
+            <div class="carte">
+              <div class="texte">
+                <h4>Pétales de viollettes glacés</h4>
+                <p>Et purée de noisettes</p>
+              </div>
+              <div class="animation-verte">
+                <div class="prix">
+                  <p>18€</p>
+                </div>
+                <div class="coche-verte">
+                  <i class="picto-check fas fa-check-circle"></i>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="carte">
-            <h4>Crème brûlée</h4>
-            <div class="texte">
-              <p>Revisité</p>
-            </div>
-            <div class="prix">
-              <p>22€</p>
-              <div class="coche-verte">
-                <i></i>
+            <div class="carte">
+              <div class="texte">
+                <h4>Fondant au chocolat</h4>
+                <p>Revisité</p>
+              </div>
+              <div class="animation-verte">
+                <div class="prix">
+                  <p>22€</p>
+                </div>
+                <div class="coche-verte">
+                  <i class="picto-check fas fa-check-circle"></i>
+                </div>
               </div>
             </div>
-          </div>
-          <div class="carte">
-            <h4>Tiramisu</h4>
-            <div class="texte">
-              <p>&Agrave; la noisette</p>
-            </div>
-            <div class="prix">
-              <p>23€</p>
-              <div class="coche-verte">
-                <i></i>
+            <div class="carte">
+              <div class="texte">
+                <h4>Millefeuille croustillant</h4>
+                <p>Myrtilles et pâte d'amande</p>
+              </div>
+              <div class="animation-verte">
+                <div class="prix">
+                  <p>23€</p>
+                </div>
+                <div class="coche-verte">
+                  <i class="picto-check fas fa-check-circle"></i>
+                </div>
               </div>
             </div>
           </div>
         </article>
-        <button>Commander</button>
+      </article>
+      <button><a href="#">Commander</a></button>
     </section>
   </main>
   <!-- Footer -->
   <footer>
     <div class="footer-logo">
-      <img src="../images/logos/ohmyfood@2x.svg" alt="OhMyFood Logo">
+      <h1>Ohmyfood</h1>
     </div>
-    <div>
-      <ul>
-        <li><i></i>Proposer un restaurant</li>
-        <li><i></i>Devenir partenaire</li>
-        <li>Mentions légales</li>
-        <li>Contact</li>
-      </ul>
+    <div class="nos-mentions">
+      <div class="mentions"><i class="fas fa-utensils"></i>Proposer un restaurant</div>
+      <div class="mentions"><i class="fas fa-hands-helping hand"></i>Devenir partenaire</div>
+      <div class="mentions">Mentions légales</div>
+      <div class="mentions">Contact</div>
     </div>
   </footer>
 </body>

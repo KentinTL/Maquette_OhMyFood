@@ -8,9 +8,28 @@
 h1, h2 {
   font-family: 'Shrikhand', cursive;
 }
+// @keyframes spinner {
+//   0% {
+//     opacity: 1;
+//     transform: translate3d(-50%, -50%, 0) rotate(0deg);
+//   }
+//   100% {
+//     opacity: 0;
+//   }
+// }
 body{
+  // position: relative;
   max-width: 1400px;
   margin: 0 auto;
+  // .loading-spinner {
+  //   animation: 3s linear infinite spinner;
+  //   color: black;
+  //   height: 250px;
+  //   position: absolute;
+  //   top: 0px;
+  //   width: 250px;
+  //   z-index: 999;
+  // }
 }
 // VARIABLE
 
@@ -35,16 +54,17 @@ main {
   padding: 10px;
   display: flex;
   justify-content: center;
-  svg {
+  .picto-location {
     color: #353535;
     padding-left: 40px;
   }
   #searchbar {
     background-color: #EAEAEA;
     border: none;
-    text-align: center;
-    margin-right: 25px;
     color: #353535;
+    font-size: 18px;
+    margin-right: 25px;
+    text-align: center;
   }
 }
 
@@ -70,9 +90,10 @@ main {
     }
   }
   button:hover {
-    transition: 0.5s;
+    cursor: pointer;
     background: linear-gradient(to top left, #965ddc, #ff85dc);
     box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 5px 3px;
+    transition: 0.25s;
   }
 }
 
@@ -113,14 +134,14 @@ main {
         margin: 0 20px 0 -35px;
         width: 30px;
       }
-      svg {
+      .logo-fonction {
         margin: 0 10px 0 0;
         color: #7E7E7E;
       }
     }
   }
   #ma-liste {
-    .cartouche:hover svg {
+    .cartouche:hover .logo-fonction {
       color: #9356DC;
 
     }
@@ -182,6 +203,33 @@ main {
       }
       .resto-logo {
         margin-right: 10px;
+        position: relative;
+        .coeur-vide {
+          font-size: 20px;
+          transition: 0.75s;
+        }
+        .coeur-plein {
+          color: transparent;
+          background: linear-gradient(1turn, #965ddc, #ff85dc);
+          font-size: 20px;
+          opacity: 0;
+          position: absolute;
+          transition: 0.75s;
+          right: 0;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      .resto-logo:hover {
+        cursor: pointer;
+      }
+      .resto-logo:hover .coeur-vide {
+        transition: 0.75s;
+        opacity: 0;
+      }
+      .resto-logo:hover .coeur-plein {
+        transition: 0.75s;
+        opacity: 1;
       }
     }
   }
@@ -200,7 +248,7 @@ footer {
   .nos-mentions {
     display: flex;
     flex-wrap: wrap;
-    .mentions svg {
+    .mentions .footer-picto {
       margin-right: 10px;
     }
     .mentions {
@@ -217,7 +265,7 @@ footer {
   display: flex;
   a {
     color: black;
-    svg {
+    .fleche-gauche {
       margin-left: 10px;
       font-size: 24px;
     }
@@ -228,9 +276,20 @@ footer {
 }
   // Main
 .main-menus {
+  // Background images de chaque page menu
+  
   // Entêtes
-  #demi-bg {
-    background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  #demi-bg-lne {
+    background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  } 
+  #demi-bg-lpdg {
+  background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  } 
+  #demi-bg-ldds {
+    background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  }
+    #demi-bg-alf {
+    background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
@@ -250,9 +309,33 @@ footer {
         font-size: 28px;
       }
       .logo-aime-nom {
-        svg {
+        position: relative;
+        .coeur-vide {
           font-size: 22px;
+          transition: 0.75s;
         }
+        .coeur-plein {
+          position: absolute;
+          background: linear-gradient(1turn, #965ddc, #ff85dc);
+          color: transparent;
+          font-size: 22px;
+          opacity: 0;
+          right: 0px;
+          transition: 0.75s;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
+      }
+      .logo-aime-nom:hover {
+        cursor: pointer;
+      }
+      .logo-aime-nom:hover .coeur-vide {
+        transition: 0.75s;
+        opacity: 0;
+      }
+      .logo-aime-nom:hover .coeur-plein {
+        transition: 0.75s;
+        opacity: 1;
       }
     }
   }
@@ -275,7 +358,18 @@ footer {
         width: 40px;
       }
       // Cartes des entrées
+      @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+            margin-top: 30px;
+        }
+        100% {
+            opacity: 1;
+            margin-top: 0px;
+         }
+      }
       .carte-generale {
+        animation: fadeInAnimation ease 1.5s;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -295,9 +389,20 @@ footer {
           padding: 15px 0px 10px 15px;
           width: 355px;
           .texte {
+            overflow: hidden;
             white-space: nowrap;
+            text-overflow: ellipsis;
+            margin-right: 10px;
+            h4 {
+              overflow: hidden;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+            }
             p {
+              overflow: hidden;
               font-size: 14px;
+              text-overflow: ellipsis;
+              white-space: nowrap;
             }
           }
           .animation-verte {
@@ -320,7 +425,7 @@ footer {
               margin-top: -15px;
               transition: 1s;
               width: 70px;
-              svg {
+              .picto-check {
                 color: white;
                 transition: 1s;
               }
@@ -328,13 +433,6 @@ footer {
           }
         }
         .carte:hover{
-          .texte {  
-            overflow: hidden;
-            h4, p {
-              text-overflow: ellipsis;
-              white-space: nowrap;
-            }
-          }
           cursor: pointer;
           .prix {
             margin-right: 50px;
@@ -345,7 +443,7 @@ footer {
             margin-right: 0px;
             transition: 1s;
           }
-          svg {
+          .picto-check {
             transition: 1s;
             transform: rotate(360deg);
           }
@@ -365,9 +463,10 @@ footer {
       }
     }
     button:hover {
-      transition: 0.5s;
+      cursor: pointer;
       background: linear-gradient(to top left, #965ddc, #ff85dc);
       box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 5px 3px;
+      transition: 0.25s;
     }
   }
 }

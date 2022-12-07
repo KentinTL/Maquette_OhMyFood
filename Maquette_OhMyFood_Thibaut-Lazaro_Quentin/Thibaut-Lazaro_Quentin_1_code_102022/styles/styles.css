@@ -34,16 +34,17 @@ main {
   display: flex;
   justify-content: center;
 }
-#ma-search-bar svg {
+#ma-search-bar .picto-location {
   color: #353535;
   padding-left: 40px;
 }
 #ma-search-bar #searchbar {
   background-color: #EAEAEA;
   border: none;
-  text-align: center;
-  margin-right: 25px;
   color: #353535;
+  font-size: 18px;
+  margin-right: 25px;
+  text-align: center;
 }
 
 #presentation {
@@ -68,9 +69,10 @@ main {
   color: white;
 }
 #presentation button:hover {
-  transition: 0.5s;
+  cursor: pointer;
   background: linear-gradient(to top left, #965ddc, #ff85dc);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 5px 3px;
+  transition: 0.25s;
 }
 
 #fonctionnement h2 {
@@ -110,11 +112,11 @@ main {
   margin: 0 20px 0 -35px;
   width: 30px;
 }
-#fonctionnement #ma-liste .cartouche svg {
+#fonctionnement #ma-liste .cartouche .logo-fonction {
   margin: 0 10px 0 0;
   color: #7E7E7E;
 }
-#fonctionnement #ma-liste .cartouche:hover svg {
+#fonctionnement #ma-liste .cartouche:hover .logo-fonction {
   color: #9356DC;
 }
 
@@ -172,6 +174,33 @@ main {
 }
 #nos-restaurants .resto-pres figcaption .resto-logo {
   margin-right: 10px;
+  position: relative;
+}
+#nos-restaurants .resto-pres figcaption .resto-logo .coeur-vide {
+  font-size: 20px;
+  transition: 0.75s;
+}
+#nos-restaurants .resto-pres figcaption .resto-logo .coeur-plein {
+  color: transparent;
+  background: linear-gradient(1turn, #965ddc, #ff85dc);
+  font-size: 20px;
+  opacity: 0;
+  position: absolute;
+  transition: 0.75s;
+  right: 0;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#nos-restaurants .resto-pres figcaption .resto-logo:hover {
+  cursor: pointer;
+}
+#nos-restaurants .resto-pres figcaption .resto-logo:hover .coeur-vide {
+  transition: 0.75s;
+  opacity: 0;
+}
+#nos-restaurants .resto-pres figcaption .resto-logo:hover .coeur-plein {
+  transition: 0.75s;
+  opacity: 1;
 }
 
 footer {
@@ -188,7 +217,7 @@ footer .nos-mentions {
   display: flex;
   flex-wrap: wrap;
 }
-footer .nos-mentions .mentions svg {
+footer .nos-mentions .mentions .footer-picto {
   margin-right: 10px;
 }
 footer .nos-mentions .mentions {
@@ -203,7 +232,7 @@ footer .nos-mentions .mentions {
 .menu-logo a {
   color: black;
 }
-.menu-logo a svg {
+.menu-logo a .fleche-gauche {
   margin-left: 10px;
   font-size: 24px;
 }
@@ -211,14 +240,23 @@ footer .nos-mentions .mentions {
   margin: 0 auto;
 }
 
-.main-menus #demi-bg {
+.main-menus #demi-bg-lne {
+  background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+}
+.main-menus #demi-bg-lpdg {
   background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+}
+.main-menus #demi-bg-ldds {
+  background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+}
+.main-menus #demi-bg-alf {
+  background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   min-height: 350px;
 }
-.main-menus #demi-bg .nom-restaurant {
+.main-menus #demi-bg-alf .nom-restaurant {
   align-self: flex-end;
   align-items: center;
   background-color: white;
@@ -230,11 +268,37 @@ footer .nos-mentions .mentions {
   padding: 25px 20px;
   width: 100%;
 }
-.main-menus #demi-bg .nom-restaurant h2 {
+.main-menus #demi-bg-alf .nom-restaurant h2 {
   font-size: 28px;
 }
-.main-menus #demi-bg .nom-restaurant .logo-aime-nom svg {
+.main-menus #demi-bg-alf .nom-restaurant .logo-aime-nom {
+  position: relative;
+}
+.main-menus #demi-bg-alf .nom-restaurant .logo-aime-nom .coeur-vide {
   font-size: 22px;
+  transition: 0.75s;
+}
+.main-menus #demi-bg-alf .nom-restaurant .logo-aime-nom .coeur-plein {
+  position: absolute;
+  background: linear-gradient(1turn, #965ddc, #ff85dc);
+  color: transparent;
+  font-size: 22px;
+  opacity: 0;
+  right: 0px;
+  transition: 0.75s;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.main-menus #demi-bg-alf .nom-restaurant .logo-aime-nom:hover {
+  cursor: pointer;
+}
+.main-menus #demi-bg-alf .nom-restaurant .logo-aime-nom:hover .coeur-vide {
+  transition: 0.75s;
+  opacity: 0;
+}
+.main-menus #demi-bg-alf .nom-restaurant .logo-aime-nom:hover .coeur-plein {
+  transition: 0.75s;
+  opacity: 1;
 }
 .main-menus .menu {
   padding-bottom: 30px;
@@ -254,7 +318,29 @@ footer .nos-mentions .mentions {
   height: 4px;
   width: 40px;
 }
+@-webkit-keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    margin-top: 30px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+    margin-top: 30px;
+  }
+  100% {
+    opacity: 1;
+    margin-top: 0px;
+  }
+}
 .main-menus .menu .article-principal .carte-generale {
+  -webkit-animation: fadeInAnimation ease 1.5s;
+          animation: fadeInAnimation ease 1.5s;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
@@ -272,10 +358,21 @@ footer .nos-mentions .mentions {
   width: 355px;
 }
 .main-menus .menu .article-principal .carte-generale .carte .texte {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  margin-right: 10px;
+}
+.main-menus .menu .article-principal .carte-generale .carte .texte h4 {
+  overflow: hidden;
+  text-overflow: ellipsis;
   white-space: nowrap;
 }
 .main-menus .menu .article-principal .carte-generale .carte .texte p {
+  overflow: hidden;
   font-size: 14px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 .main-menus .menu .article-principal .carte-generale .carte .animation-verte {
   display: flex;
@@ -299,19 +396,12 @@ footer .nos-mentions .mentions {
   transition: 1s;
   width: 70px;
 }
-.main-menus .menu .article-principal .carte-generale .carte .animation-verte .coche-verte svg {
+.main-menus .menu .article-principal .carte-generale .carte .animation-verte .coche-verte .picto-check {
   color: white;
   transition: 1s;
 }
 .main-menus .menu .article-principal .carte-generale .carte:hover {
   cursor: pointer;
-}
-.main-menus .menu .article-principal .carte-generale .carte:hover .texte {
-  overflow: hidden;
-}
-.main-menus .menu .article-principal .carte-generale .carte:hover .texte h4, .main-menus .menu .article-principal .carte-generale .carte:hover .texte p {
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .main-menus .menu .article-principal .carte-generale .carte:hover .prix {
   margin-right: 50px;
@@ -322,7 +412,7 @@ footer .nos-mentions .mentions {
   margin-right: 0px;
   transition: 1s;
 }
-.main-menus .menu .article-principal .carte-generale .carte:hover svg {
+.main-menus .menu .article-principal .carte-generale .carte:hover .picto-check {
   transition: 1s;
   transform: rotate(360deg);
 }
@@ -339,7 +429,8 @@ footer .nos-mentions .mentions {
   color: white;
 }
 .main-menus .menu button:hover {
-  transition: 0.5s;
+  cursor: pointer;
   background: linear-gradient(to top left, #965ddc, #ff85dc);
   box-shadow: rgba(0, 0, 0, 0.3) 0px 10px 20px, rgba(0, 0, 0, 0.22) 0px 5px 3px;
+  transition: 0.25s;
 }/*# sourceMappingURL=styles.css.map */
