@@ -8,30 +8,34 @@
 h1, h2 {
   font-family: 'Shrikhand', cursive;
 }
-// @keyframes spinner {
-//   0% {
-//     opacity: 1;
-//     transform: translate3d(-50%, -50%, 0) rotate(0deg);
-//   }
-//   100% {
-//     opacity: 0;
-//   }
-// }
+
+@keyframes spinner {
+  0% {
+    transform: translate3d(0%, 0%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0%, 0%, 0) rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes invisible {
+  
+}
 body{
-  // position: relative;
   max-width: 1400px;
   margin: 0 auto;
-  // .loading-spinner {
-  //   animation: 3s linear infinite spinner;
-  //   color: black;
-  //   height: 250px;
-  //   position: absolute;
-  //   top: 0px;
-  //   width: 250px;
-  //   z-index: 999;
-  // }
+  position: relative;
+  .loading-spinner {
+    left: 30%;
+    position: absolute;
+    top: 25%;
+    right: 45%;
+    img {
+      max-width: 150px;
+      animation: spinner 3s;
+    }
+  }
 }
-// VARIABLE
 
 // INDEX HTML
 // header
@@ -238,8 +242,9 @@ main {
 // FOOTER
 footer {
   background-color: #353535;
-  padding: 15px 15px 30px 15px;
   color: white;
+  margin-top: -50px;
+  padding: 15px 15px 30px 15px;
   .footer-logo h1 {
     font-size: 18px;
     font-weight: 200;
@@ -279,21 +284,35 @@ footer {
   // Background images de chaque page menu
   
   // Entêtes
-  #demi-bg-lne {
+  .demi-bg-lne {
     background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
-  } 
-  #demi-bg-lpdg {
-  background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-  } 
-  #demi-bg-ldds {
-    background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-  }
-    #demi-bg-alf {
-    background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     min-height: 350px;
+  } 
+  .demi-bg-lpdg {
+    background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    min-height: 350px;  
+  } 
+  .demi-bg-ldds {
+    background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    min-height: 350px;
+  }
+  .demi-bg-alf {
+    background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    min-height: 350px;
+    }
+  .demi-bg {
      .nom-restaurant {
       align-self: flex-end;
       align-items: center;

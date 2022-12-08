@@ -10,9 +10,42 @@ h1, h2 {
   font-family: "Shrikhand", cursive;
 }
 
+@-webkit-keyframes spinner {
+  0% {
+    transform: translate3d(0%, 0%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0%, 0%, 0) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes spinner {
+  0% {
+    transform: translate3d(0%, 0%, 0) rotate(0deg);
+  }
+  100% {
+    transform: translate3d(0%, 0%, 0) rotate(360deg);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes invisible {}
+@keyframes invisible {}
 body {
   max-width: 1400px;
   margin: 0 auto;
+  position: relative;
+}
+body .loading-spinner {
+  left: 30%;
+  position: absolute;
+  top: 25%;
+  right: 45%;
+}
+body .loading-spinner img {
+  max-width: 150px;
+  -webkit-animation: spinner 3s;
+          animation: spinner 3s;
 }
 
 header {
@@ -205,8 +238,9 @@ main {
 
 footer {
   background-color: #353535;
-  padding: 15px 15px 30px 15px;
   color: white;
+  margin-top: -50px;
+  padding: 15px 15px 30px 15px;
 }
 footer .footer-logo h1 {
   font-size: 18px;
@@ -240,23 +274,35 @@ footer .nos-mentions .mentions {
   margin: 0 auto;
 }
 
-.main-menus #demi-bg-lne {
+.main-menus .demi-bg-lne {
   background-image: url(../images/restaurants/stil-u2Lp8tXIcjw-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  min-height: 350px;
 }
-.main-menus #demi-bg-lpdg {
-  background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
-}
-.main-menus #demi-bg-ldds {
-  background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
-}
-.main-menus #demi-bg-alf {
+.main-menus .demi-bg-lpdg {
   background-image: url(../images/restaurants/jay-wennington-N_Y88TWmGwA-unsplash.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
   min-height: 350px;
 }
-.main-menus #demi-bg-alf .nom-restaurant {
+.main-menus .demi-bg-ldds {
+  background-image: url(../images/restaurants/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  min-height: 350px;
+}
+.main-menus .demi-bg-alf {
+  background-image: url(../images/restaurants/toa-heftiba-DQKerTsQwi0-unsplash.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  min-height: 350px;
+}
+.main-menus .demi-bg .nom-restaurant {
   align-self: flex-end;
   align-items: center;
   background-color: white;
@@ -268,17 +314,17 @@ footer .nos-mentions .mentions {
   padding: 25px 20px;
   width: 100%;
 }
-.main-menus #demi-bg-alf .nom-restaurant h2 {
+.main-menus .demi-bg .nom-restaurant h2 {
   font-size: 28px;
 }
-.main-menus #demi-bg-alf .nom-restaurant .logo-aime-nom {
+.main-menus .demi-bg .nom-restaurant .logo-aime-nom {
   position: relative;
 }
-.main-menus #demi-bg-alf .nom-restaurant .logo-aime-nom .coeur-vide {
+.main-menus .demi-bg .nom-restaurant .logo-aime-nom .coeur-vide {
   font-size: 22px;
   transition: 0.75s;
 }
-.main-menus #demi-bg-alf .nom-restaurant .logo-aime-nom .coeur-plein {
+.main-menus .demi-bg .nom-restaurant .logo-aime-nom .coeur-plein {
   position: absolute;
   background: linear-gradient(1turn, #965ddc, #ff85dc);
   color: transparent;
@@ -289,14 +335,14 @@ footer .nos-mentions .mentions {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.main-menus #demi-bg-alf .nom-restaurant .logo-aime-nom:hover {
+.main-menus .demi-bg .nom-restaurant .logo-aime-nom:hover {
   cursor: pointer;
 }
-.main-menus #demi-bg-alf .nom-restaurant .logo-aime-nom:hover .coeur-vide {
+.main-menus .demi-bg .nom-restaurant .logo-aime-nom:hover .coeur-vide {
   transition: 0.75s;
   opacity: 0;
 }
-.main-menus #demi-bg-alf .nom-restaurant .logo-aime-nom:hover .coeur-plein {
+.main-menus .demi-bg .nom-restaurant .logo-aime-nom:hover .coeur-plein {
   transition: 0.75s;
   opacity: 1;
 }
