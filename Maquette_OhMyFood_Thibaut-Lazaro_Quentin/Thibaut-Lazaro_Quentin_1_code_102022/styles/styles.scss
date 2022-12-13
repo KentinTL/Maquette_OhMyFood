@@ -11,53 +11,83 @@ h1, h2 {
 
 @keyframes spinner {
   0% {
+    opacity: 1;
     transform: translate3d(0%, 0%, 0) rotate(0deg);
   }
+  85%{
+    opacity: 1;
+  }
   100% {
-    transform: translate3d(0%, 0%, 0) rotate(360deg);
     opacity: 0;
+    transform: translate3d(0%, 0%, 0) rotate(360deg);
   }
 }
+
 @keyframes invisible {
-  
+  0% {
+    opacity: 0;
+  }
+  95% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transition: 0.4s;
+  }
 }
 body{
+  background-color: #F7F7F7;
   max-width: 1400px;
   margin: 0 auto;
   position: relative;
   .loading-spinner {
-    left: 30%;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    justify-content: center;
     position: absolute;
-    top: 25%;
-    right: 45%;
+    width: 100%;
+    z-index: -1;
     img {
-      max-width: 150px;
       animation: spinner 3s;
+      opacity: 0;
+      max-width: 150px;
     }
   }
 }
 
 // INDEX HTML
 // header
+.header-index {
+  animation: invisible 3.5s;
+  transition: 0.4s;
+}
 header {
-  padding: 10px 5px 0px 5px;
+  background-color: #FFFF;
   box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
-              rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+  padding: 10px 5px 0px 5px;
   .header-logo {
     display: flex;
     justify-content: center;
   }
 }
 // MAIN
+.main-index {
+  animation: invisible 3.5s;
+}
 main {
   background-color: #F7F7F7;
 }
 // Search Bar
 #ma-search-bar {
+  animation: invisible 3.5s;  
   background-color: #EAEAEA;
-  padding: 10px;
   display: flex;
   justify-content: center;
+  margin-top: 4px;
+  padding: 10px;
+  transition: 0.4s;
   .picto-location {
     color: #353535;
     padding-left: 40px;
@@ -74,8 +104,10 @@ main {
 
 // Présentations
 #presentation {
-  text-align: center;
+  animation: invisible 3.5s;
   margin: 40px 20px 80px 20px;
+  text-align: center;
+  transition: 0.4s;
   h2 {
     font-family: "Roboto", sans-serif;
   }
@@ -103,6 +135,9 @@ main {
 
 // Notre fonctionnement 
 #fonctionnement {
+  animation: invisible 3.5s;
+  background-color: #ffff;
+  transition: 0.4s;
   h2 {
     font-family: "Roboto", sans-serif;
     margin-left: 15px;
@@ -118,15 +153,16 @@ main {
       align-items: center;
       border-radius: 30px;
       box-shadow: rgba(0, 0, 0, 0.15) 0px 3px 8px;
-      max-width: 355px;
       cursor: pointer;
       display: flex;
       flex-direction: row;
       font-size: 20px;
       font-weight: 700;
-      width: 75%;
-      padding: 20px;
       margin: 25px auto;
+      max-width: 355px;
+      padding: 20px;
+      transition: 0.25s;
+      width: 75%;
       .cercle {
         align-items: center;
         background-color: #9356DC;
@@ -145,17 +181,22 @@ main {
     }
   }
   #ma-liste {
-    .cartouche:hover .logo-fonction {
-      color: #9356DC;
-
+    .cartouche:hover {
+      background-color: #F5EDFF; 
+      transition: 0.25s;
+      .logo-fonction {
+        color: #9356DC;
+      }
     }
   }
 }
 
 // Nos Restaurants
 #nos-restaurants {
+  animation: invisible 3.5s;
   margin-bottom: 50px;
   max-width: 100%;
+  transition: 0.4s;
   h2 {
     font-family: "Roboto", sans-serif;
     margin-left: 15px;
@@ -240,10 +281,13 @@ main {
 }
 
 // FOOTER
+.footer-index {
+  animation: invisible 3.5s;
+  transition: 0.4s;
+}
 footer {
   background-color: #353535;
   color: white;
-  margin-top: -50px;
   padding: 15px 15px 30px 15px;
   .footer-logo h1 {
     font-size: 18px;
@@ -253,12 +297,12 @@ footer {
   .nos-mentions {
     display: flex;
     flex-wrap: wrap;
-    .mentions .footer-picto {
-      margin-right: 10px;
-    }
     .mentions {
       margin-bottom: 10px;
       margin-right: 150px;
+      .footer-picto {
+        margin-right: 10px;
+      }
     }
   }
 }
@@ -313,10 +357,10 @@ footer {
     min-height: 350px;
     }
   .demi-bg {
-     .nom-restaurant {
+    .nom-restaurant {
       align-self: flex-end;
       align-items: center;
-      background-color: white;
+      background-color: #F7F7F7;
       border-top-left-radius: 35px;
       border-top-right-radius: 35px;
       bottom: 0px;
@@ -388,7 +432,7 @@ footer {
          }
       }
       .carte-generale {
-        animation: fadeInAnimation ease 1.5s;
+        animation: fadeInAnimation ease 3s;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-around;
@@ -455,7 +499,6 @@ footer {
           cursor: pointer;
           .prix {
             margin-right: 50px;
-            background: white;
             transition: 1s;
           }
           .coche-verte {
